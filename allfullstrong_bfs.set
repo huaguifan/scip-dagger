@@ -1,0 +1,126 @@
+# verbosity level of output
+# [type: int, range: [0,5], default: 4]
+display/verblevel = 3
+
+#######################
+# display setting
+#######################
+
+# display activation status of display column <lpiterations> (0: off, 1: auto, 2:on)
+# # [type: int, range: [0,2], default: 1]
+display/lpiterations/active = 0
+
+# display activation status of display column <lpavgiterations> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/lpavgiterations/active = 0
+
+# display activation status of display column <lpcond> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/lpcond/active = 0
+
+# display activation status of display column <memused> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/memused/active = 0
+
+# display activation status of display column <nexternbranchcands> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/nexternbranchcands/active = 0
+
+# display activation status of display column <vars> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/vars/active = 0
+
+# display activation status of display column <conss> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/conss/active = 0
+
+# display activation status of display column <curconss> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/curconss/active = 0
+
+# display activation status of display column <curcols> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/curcols/active = 0
+
+# display activation status of display column <currows> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/currows/active = 0
+
+# display activation status of display column <cuts> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/cuts/active = 0
+
+# display activation status of display column <separounds> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/separounds/active = 0
+
+# display activation status of display column <poolsize> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/poolsize/active = 0
+
+# display activation status of display column <conflicts> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/conflicts/active = 0
+
+# display activation status of display column <strongbranchs> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/strongbranchs/active = 0
+
+# display activation status of display column <pseudoobj> (0: off, 1: auto, 2:on)
+# [type: int, range: [0,2], default: 1]
+display/pseudoobj/active = 0
+
+# display activation status of display column <estimate> (0: off, 1: auto, 2:on)
+# # [type: int, range: [0,2], default: 1]
+display/estimate/active = 0
+
+# display activation status of display column <maxdepth> (0: off, 1: auto, 2:on)
+# # [type: int, range: [0,2], default: 1]
+display/maxdepth/active = 0
+
+# display activation status of display column <curdualbound> (0: off, 1: auto, 2:on)
+# # [type: int, range: [0,2], default: 1]
+display/curdualbound/active = 0
+
+# use cpu time
+timing/clocktype = 1
+
+#######################
+# allfullstrong setting
+#######################
+
+# priority of branching rule <allfullstrong>
+# [type: int, range: [-536870912,536870911], default: -1000]
+branching/allfullstrong/priority = 500000
+
+# maximal depth level, up to which branching rule <allfullstrong> should be used (-1 for no limit)
+# [type: int, range: [-1,2147483647], default: -1]
+branching/allfullstrong/maxdepth = -1
+
+# maximal relative distance from current node's dual bound to primal bound compared to best node's dual bound for applying branching rule (0.0: only on current best node, 1.0: on all nodes)
+# [type: real, range: [0,1], default: 1]
+branching/allfullstrong/maxbounddist = 1
+
+#######################
+# bfs setting
+#######################
+
+# priority of node selection rule <bfs> in standard mode
+# [type: int, range: [-536870912,536870911], default: 100000]
+nodeselection/bfs/stdpriority = 1000000
+
+# priority of node selection rule <bfs> in memory saving mode
+# [type: int, range: [-536870912,536870911], default: 0]
+nodeselection/bfs/memsavepriority = 0
+
+# minimal plunging depth, before new best node may be selected (-1 for dynamic setting)
+# [type: int, range: [-1,2147483647], default: -1]
+nodeselection/bfs/minplungedepth = -1
+
+# maximal plunging depth, before new best node is forced to be selected (-1 for dynamic setting)
+# [type: int, range: [-1,2147483647], default: -1]
+nodeselection/bfs/maxplungedepth = -1
+
+# maximal quotient (curlowerbound - lowerbound)/(cutoffbound - lowerbound) where plunging is performed
+# [type: real, range: [0,1.79769313486232e+308], default: 0.25]
+nodeselection/bfs/maxplungequot = 0.25
